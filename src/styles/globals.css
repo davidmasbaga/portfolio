@@ -3,7 +3,7 @@
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', 'Inter', monospace;
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', 'Inter', 'Roboto' monospace;
 
   --foreground-rgb: 255,255,255;
   --background-start-rgb: 255,255,255;
@@ -101,11 +101,5 @@ a {
   }
 }
 
-p{
-  font-family: 'Roboto';
-}
 
-h1{
-  
-  font-family: 'Inter';
-}
+

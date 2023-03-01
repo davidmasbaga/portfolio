@@ -1,41 +1,58 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react';
-import styles from '@/Components/Home/weather.module.css'
+import React, { useState } from "react";
+import { useEffect } from "react";
+import styles from "@/Components/Home/weather.module.css";
+// import { Roboto } from "@next/font/google";
+
+// const roboto = Roboto({ 
+//   subsets: ['latin'],
+  
+//   weight: '400',
+  
+// })
+
+
 
 function Weather() {
+  const [data, setData] = useState({});
 
-    const [data, setData] = useState({})
-    
- 
-    const city = data.city_name
-    const temperatureToday = data.data[0].app_temp
-    const cloudState = data.data[0].weather.description
+  
 
-    const api = "944f9d6a4412e7c5e1a0210680754702"
+  
+
+  useEffect(() => {
+    const api_key = "0726da53b78cd50445d3deba22acb0e5";
+
+    const lat = "41.388";
+
+    const lon = "2.1589";
+
+   
+
+   
+
+
+
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}&units=metric`
+    )
+      .then((response) => response.json())
+      .then(res=> setData(res))
+      .catch((err) => err);
+  }, []);
+
+  
     
-    useEffect(() => {
-        
-        
-        fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=41.388&lon=2.1589&units=metric&lang=es'
-                `https://api.openweathermap.org/data/2.5/weather?lat=41.388&lon=2.1589&appid=${api}`       
-        )
-            .then(response => response.json())
-            .then(response => setData(response))
-            .catch(err => (err));
-    
-    
-    }, [])
-    
-    
-console.log(data)
+
+  const temp = data?.main?.temp
+  const sky= data?.weather?.[0].main
+
 
   return (
     <div>
-        {city === undefined || temperatureToday === undefined || cloudState === undefined ? ("Portfolio Personal"):(<p>{city} <span className={styles.lighter}>{temperatureToday}º</span><span className={styles.lighter}>{cloudState}</span></p>)}
-
-        
+      <p >{`Barcelona `} <span className={styles.lighter}>{`${temp}º `} </span>{sky}</p>
+      
     </div>
-  )
+  );
 }
 
-export default Weather
+export default Weather;
