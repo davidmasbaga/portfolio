@@ -1,97 +1,71 @@
-import * as React from 'react';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
-import Typography from '@mui/material/Typography';
+import React from 'react';
+import { Timeline } from 'antd';
+import { SmileOutlined } from '@ant-design/icons';
+import styles from '@/Components/Home/Timeline.module.css'
+
+const JobTimeline = () => (
+  
+  <div className={styles.body_timeline}>
+    <div className={styles.timeline_left}><h3>Job Experience</h3></div>
+    <Timeline className={styles.timeline_right}
+    items={[
+     {
+        color: '#F2709C',
+        children: (
+          <>
+            <h3> Bootcamp Nuclio Digital School <span className={styles.lighter}>October 2022 - March2023</span> </h3>
+            <p>During the master I have acquired knowledge in different technologies for the creation of web applications in Full Stack with Mongo, Express, React and Node (MERN). The TFM has consisted in making a Linkedin replica in which I have worked as a team applying agile methodologies and we have managed to develop a functional tool.
+In addition to MERN during the master I have worked with TypeScript, Next, WebSockets, Testing Unit and E2E with Cypress, Docker and SQL databases and deploy.</p>
+            
+          </>
+        ),
+      },
+      {
+        color: '#F2709C',
+        children: (
+          <>
+            <h3> Growwer <span className={styles.lighter}>June 2021 - Nowadays</span> </h3>
+            <p>Development of different functions, media and advertiser acquisition in an online visibility tool
+and advertisers in an online visibility tool
+Scrum Master in the managed department.
+Development of QA Tester E2E functions, manual testing of new features.</p>
+            
+          </>
+        ),
+      },
+      {
+        color: '#F2709C',
+        children: (
+          <>
+            <h3> Visual Foto & Twolittledraws <span className={styles.lighter}>December 2012 - May 2021</span> </h3>
+            <p>In 2012, together with another partner, we founded Visual Foto. Our photographic agency.
+Social and advertising photography. Some of our clients have been: Disney, Unilever, Moncho's, Marco de Comunicación, Netflix, Le Meridien Barcelona or EADA.
+
+Thanks to the knowledge of graphic design, in 2015 I decided to undertake a second project parallel to Visual Foto. Two Little Draws is a small brand focused on graphic design.</p>
+            
+          </>
+        ),
+      },
+      {
+        color: '#F2709C',
+        children: (
+          <>
+            <h3> The Fotoshop <span className={styles.lighter}> May 2001 - December 2012</span> </h3>
+            <p>I worked for 11 years at The Fotoshop, a company specialized in social and advertising photography.</p>
+            
+          </>
+        ),
+      },
+      
+      
+    ]}
+  />
+
+  </div>
+ 
+);
 
 
+export default JobTimeline
 
-export default function TimeLineCv() {
-    return (
-      <Timeline position="alternate">
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0' }}
-            align="right"
-            variant="body2"
-            color="text.secondary"
-          >
-            9:30 am
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot>
-              <FastfoodIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              Eat
-            </Typography>
-            <Typography>Because you need strength</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0' }}
-            variant="body2"
-            color="text.secondary"
-          >
-            10:00 am
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <LaptopMacIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              Code
-            </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary" variant="outlined">
-              <HotelIcon />
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              Sleep
-            </Typography>
-            <Typography>Because you need rest</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-            <TimelineDot color="secondary">
-              <RepeatIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              Repeat
-            </Typography>
-            <Typography>Because this is the life you love!</Typography>
-          </TimelineContent>
-        </TimelineItem>
-      </Timeline>
-    );
-  }
+

@@ -5,6 +5,7 @@ import styles from '@/Components/Home/Hero.module.css'
 import Weather from "./Weather"
 import Image from 'next/image'
 
+
 // const inter = Inter({ 
 //     subsets: ['latin'],
 //     weight: '600',
@@ -20,7 +21,7 @@ import Image from 'next/image'
 
 function Hero() {
   return (
-    <>
+    <div className={styles.hero}>
 
       <div className={styles.weather}>
         <Weather />
@@ -39,7 +40,7 @@ function Hero() {
 
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
