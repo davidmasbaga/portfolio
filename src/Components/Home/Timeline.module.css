@@ -1,6 +1,6 @@
 .body_timeline {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 7rem;
     align-items: center;
     margin-top: 100px;
@@ -20,12 +20,18 @@
 .timeline_right p {
     color: white;
     font-family: 'Roboto';
+    letter-spacing: 0.2px;
+    line-height: 1.5;
 
 }
 
 .timeline_right h3 {
     color: white;
     font-family: 'Roboto';
+    line-height: 1;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    margin-top: 20px;
 
 }
 

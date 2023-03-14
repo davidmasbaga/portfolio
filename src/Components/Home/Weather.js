@@ -43,7 +43,7 @@ function Weather() {
   
     
 
-  const temp = data?.main?.temp
+  const temp = Math. trunc(data?.main?.temp) 
   const sky= data?.weather?.[0].main
 
 

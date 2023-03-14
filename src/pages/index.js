@@ -6,6 +6,8 @@ import Hero from "../Components/Home/Hero"
 import Description from '@/Components/Home/description'
 import Timeline from '@/Components/Home/Timeline'
 import CardMap from '@/Components/Home/CarTecno/CardMap'
+import Projects from '@/Components/Home/Projects'
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,6 +28,8 @@ export default function Home() {
       <Hero/>
       <Timeline/>
       <CardMap/>
+      <Projects/>
+      
       
 
       

@@ -3,7 +3,7 @@
 }
 
 .weather p {
-     display: flex;
+    display: flex;
     justify-content: flex-end;
     margin: 2rem 2rem;
     line-height: 0;
@@ -35,6 +35,7 @@
 .hero_center p{
     font-size: 1.1rem;
     line-height: 25px;
+    letter-spacing: 0.2px;
     
 
 }    
