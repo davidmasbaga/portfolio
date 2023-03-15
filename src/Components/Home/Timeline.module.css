@@ -15,7 +15,6 @@
 
 .timeline_right p {
     color: white;
-    font-family: 'Roboto';
     letter-spacing: 0.2px;
     line-height: 1.5;
 
@@ -23,7 +22,6 @@
 
 .timeline_right h3 {
     color: white;
-    font-family: 'Roboto';
     line-height: 1;
     font-size: 1.3rem;
     margin-bottom: 15px;
@@ -45,7 +43,6 @@
     color: transparent;
     background: linear-gradient(220.55deg, #DD7BFF 0%, #FF6C6C 100%);
     background-clip: text;
-    font-family: 'Roboto';
     font-weight: bold;
     font-size: 5rem;
 }
