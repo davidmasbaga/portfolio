@@ -21,3 +21,20 @@
     
 
 }
+
+
+@media screen and (max-width: 1200px) {
+    .body_Projects h2{
+        max-width: 100vw;
+        padding: 0px 25px;
+        font-size: 3.5rem !important;
+        line-height: 3.2rem !important;
+        margin-top: 180px;
+    }
+
+    .body_projects_cards{
+        flex-direction: column;
+        gap:60px;
+    }
+    
+}
