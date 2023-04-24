@@ -1,5 +1,7 @@
 import { Card, Col, Row, Button, Text  } from "@nextui-org/react";
 
+import { AiFillGithub } from "react-icons/ai";
+
 export default function ProjectCard(props) {
   return (
     <Card css={{ mw: "320px", h: "500px" }}>
@@ -30,16 +32,26 @@ export default function ProjectCard(props) {
         borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
         bottom: 0,
         zIndex: 1,
+        background:"#101010"
       }}
     >
-      <Row>
-        <Col>
-          <Text color="white" size={12}>
-            Available soon.
-          </Text>
-          <Text color="white" size={12}>
-            Get notified.
-          </Text>
+      <Row >
+        <Col >
+        {props.gitHub && ( <Button flat auto rounded color="error" css={{ background: "inherit" }}>
+              <a href={props.gitHub} target='_blank'> 
+              <Text
+                css={{ color: "white", display:"flex", gap:"5px" }}
+                size={12}
+                weight="bold"
+                
+              >
+                <AiFillGithub style={{fontSize:"20px"}}/>
+                GitHub Repo
+              </Text>
+              </a>
+            </Button>)}
+
+        
         </Col>
         <Col>
           <Row justify="flex-end">
